@@ -1,14 +1,15 @@
 DROP DATABASE IF EXISTS employeetracker_db;
 CREATE DATABASE employeetracker_db;
 USE employeetracker_db;
+
 CREATE TABLE departments (
     departments_name VARCHAR(50) NOT NULL,
-    departments_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
 CREATE TABLE roles (
     roles_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     job_title VARCHAR(50) NOT NULL,
-    salary DECIMAL(10,2) NOT NULL,
+    salary BIGINT NOT NULL,
     departments_id INT,
     FOREIGN KEY(departments_id)
     REFERENCES(departments(id))
