@@ -137,7 +137,7 @@ function addDepartment() {
         })
         .then((answer) => {
             console.log(answer.name);
-            const query = `INSERT INTO departments (name) VALUES ${answer.name}("")`;
+            const query = `INSERT INTO departments (name) VALUES ('${answer.name}')`;
             connection.query(query, (err, res) => {
                 if (err) throw err;
                 console.log(`Added department ${answer.name} to the database!`);
