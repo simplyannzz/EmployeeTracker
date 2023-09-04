@@ -17,4 +17,3 @@ VALUES
     ("IT Manager", 80000.50, 2),
     ("IT specialist", 50000.00, 2);
 
-
